@@ -7,7 +7,6 @@ from federated_learning.parameters import calculate_parameter_gradients
 from federated_learning.utils import get_model_files_for_epoch
 from federated_learning.utils import get_model_files_for_suffix
 from federated_learning.utils import apply_standard_scaler
-from federated_learning.utils import get_poisoned_worker_ids_from_log
 from federated_learning.utils import get_worker_num_from_model_file_name
 from client import Client
 import matplotlib.pyplot as plt
@@ -28,8 +27,9 @@ LAYER_NAME = "fc2.weight"
 # The source class.
 CLASS_NUM = 4
 
-# Automatically filled out
-POISONED_WORKER_IDS = get_poisoned_worker_ids_from_log(EXP_INFO_PATH)
+# The IDs for the poisoned workers. This needs to be manually filled out.
+# You can find this information at the beginning of an experiment's log file.
+POISONED_WORKER_IDS = []
 
 # The resulting graph is saved to a file
 SAVE_NAME = "defense_results.jpg"
