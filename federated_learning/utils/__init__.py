@@ -22,4 +22,3 @@ from .model_list_parser import *
 from .apply_scalers import apply_standard_scaler
 from .experiment_ids import generate_experiment_ids
 from .csv_utils import convert_results_to_csv
-from .log_file_utils import get_poisoned_worker_ids_from_log
